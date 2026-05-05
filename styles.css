@@ -188,6 +188,7 @@
     }
 
     .nav-logo .logo-icon {
+      border-radius: 15px;
       width: 44px;
       height: 44px;
       background: var(--amarelo);

@@ -27,6 +27,9 @@
     }
 
     function abrirInstagram() {
-      // SUBSTITUA pelo @ real
       window.open('https://instagram.com/sabordeamorporana', '_blank');
+    }
+
+    function abrirFacebook() {
+      window.open('https://www.facebook.com/sabordeamorporana', '_blank');
     }

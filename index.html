@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sabor de Amor por Ana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="assets/imgs/">
+</head>
+<body>
+  <header id="header">
+    <nav>
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">🎂</div>
+        <div>
+          <div class="logo-text">Sabor de Amor</div>
+          <div class="logo-sub">por Ana</div>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#novidades">Novidades</a></li>
+        <li><a href="#cardapio">Cardápio</a></li>
+        <li><a href="#encomendas">Encomendas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#encomendas" class="btn btn-primary btn-sm" onclick="abrirWhats()">📱 Encomendar</a>
+      </div>
+
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#inicio"      onclick="toggleMenu()">Início</a>
+      <a href="#novidades"   onclick="toggleMenu()">Novidades</a>
+      <a href="#cardapio"    onclick="toggleMenu()">Cardápio</a>
+      <a href="#encomendas"  onclick="toggleMenu()">Encomendas</a>
+      <a href="#contato"     onclick="toggleMenu()">Contato</a>
+      <a href="#" class="btn btn-primary" onclick="abrirWhats(); toggleMenu()">📱 Encomendar agora</a>
+    </div>
+  </header>
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-inner">
+
+        <div class="hero-content fade-up">
+          <div class="hero-badge-row">
+            <span class="badge">🍰 Sugestão da Semana</span>
+            <span style="font-size:.85rem; color:var(--marrom-claro);">Edição Especial Mães</span>
+          </div>
+
+          <h1 class="hero-title">
+            Especial Ninho<br>
+            <em>Amor de mãe</em>
+          </h1>
+
+          <p class="hero-desc">
+            Nosso bolo especial coração em sabor ninho com cobertura de brigadeiro branco e morangos — feito com carinho, igual a uma carta de amor. ❤️
+          </p>
+
+          <div class="hero-price">
+            R$ 159,99 <span>/ unidade (forma coração)</span>
+          </div>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary" onclick="abrirWhats()">📱 Encomendar agora</button>
+            <a href="#novidades" class="btn btn-outline">Ver mais sabores</a>
+          </div>
+        </div>
+        <div class="hero-img-wrap fade-up" style="transition-delay:.15s">
+          <div class="hero-img-frame">
+    
+            <img
+              src="assets/imgs/bolo coração ninho.jpeg"
+              alt="Red Velvet Jardim de Flores — Sabor de Amor por Ana"
+              onerror="this.style.display='none'"
+            />
+          </div>
+
+          <div class="hero-sticker">✨ Feito com amor!</div>
+          <div class="hero-dots"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== NOVIDADES ====================== -->
+  <section class="novidades" id="novidades">
+    <div class="container">
+
+      <div class="novidades-header fade-up">
+        <div>
+          <h2 class="section-title">Novidades da Semana</h2>
+          <div class="divider"><span>🌸</span></div>
+          <p class="section-sub">Sempre tem algo novo saindo do forno com muito afeto.</p>
+        </div>
+        <a href="#cardapio" class="btn btn-outline">Ver cardápio completo →</a>
+      </div>
+
+      <div class="novidades-grid">
+
+        <div class="card-produto fade-up" onclick="abrirWhats()">
+          <div class="card-img">
+            <img
+              src="assets/imgs/bolo tapioca.jpeg"
+              alt="Bolo de Chocolate com Limão"
+              onerror="this.style.background='#f5dfc0'"
+            />
+            <div class="card-badge-pos">
+              <span class="badge badge-lancamento">🌟 Lançamento</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-nome">Bolo Tapioca</div>
+            <div class="card-desc">Bolo feito com goma de tapioca e cobertura de doce de leite caseiro. - Irresistível!</div>
+            <div class="card-footer">
+              <span class="card-preco">R$ 79,99</span>
+              <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); abrirWhats()">Pedir</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-produto fade-up" style="transition-delay:.1s" onclick="abrirWhats()">
+          <div class="card-img">
+            <img
+              src="assets/imgs/biscoito amanteigado.jpeg"
+              alt="Biscoito Amanteigado"
+              onerror="this.style.background='#f5dfc0'"
+            />
+            <div class="card-badge-pos">
+              <span class="badge badge-novo">✨ Novo</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-nome">Biscoito Amanteigado</div>
+            <div class="card-desc">Biscoitinho caseiro com mensagem carimbada — "Como é Grande Meu Amor por Você".</div>
+            <div class="card-footer">
+              <span class="card-preco">R$ 4,99</span>
+              <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); abrirWhats()">Pedir</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Card 3 ──────────────────────────────
+             SUBSTITUA src pela foto do produto real
+             Sugestão: bolo coração morango
+        ─────────────────────────────────────────── -->
+        <div class="card-produto fade-up" style="transition-delay:.2s" onclick="abrirWhats()">
+          <div class="card-img">
+            <img
+              src="assets/imgs/coração de morango.jpeg"
+              alt="Bolo Coração de Morango"
+              onerror="this.style.background='#f5dfc0'"
+            />
+            <div class="card-badge-pos">
+              <span class="badge badge-novo">✨ Novo</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-nome">Bolo Especial Red</div>
+            <div class="card-desc">Bolo Red Velvet com cobertura de chocolate branco — perfeito para presentear com amor.</div>
+            <div class="card-footer">
+              <span class="card-preco">R$ 129,99</span>
+              <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); abrirWhats()">Pedir</button>
+            </div>
+          </div>
+        </div>
+        <div class="card-produto fade-up" style="transition-delay:.3s" onclick="abrirWhats()">
+          <div class="card-img">
+            <img
+              src="assets/imgs/bolo rosca.jpeg"
+              alt="Rosca Suíça Marmorizada"
+              onerror="this.style.background='#f5dfc0'"
+            />
+            <div class="card-badge-pos">
+              <span class="badge">🏠 Caseiro</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-nome">Rosca Suíça </div>
+            <div class="card-desc">Rosca artesanal sabor tradicional agridoce - direto do forno pra sua mesa.</div>
+            <div class="card-footer">
+              <span class="card-preco">R$ 79,99</span>
+              <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); abrirWhats()">Pedir</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== BANNER ====================== -->
+  <section style="padding: 0 24px 60px;">
+    <div class="banner-afeto fade-up">
+      <div>
+        <h2>"Feito na hora,<br>com receita de afeto."</h2>
+        <p>Cada encomenda é única — adaptamos sabor, decoração e tamanho com carinho especial pra você.</p>
+      </div>
+      <button class="btn btn-primary" onclick="abrirWhats()">💛 Fale com a Ana</button>
+    </div>
+  </section>
+
+  <!-- ====================== CARDÁPIO TEMÁTICO ====================== -->
+  <section class="cardapio" id="cardapio">
+    <div class="container">
+
+      <div class="cardapio-intro fade-up">
+        <div class="tema-mes">✨ Tema de Maio — Mês das Mães</div>
+        <h2 class="section-title">Cardápio Temático</h2>
+        <div class="divider"><span>🌷</span></div>
+        <p class="section-sub">Todo mês uma coleção especial. Agora em maio, tudo pensado com amor para as mães mais especiais do mundo.</p>
+      </div>
+
+      <div class="temas-grid">
+
+        <!-- ── Tema 1 ─────── -->
+        <div class="tema-card fade-up" onclick="abrirWhats()">
+          <div class="tema-icon">🌸</div>
+          <div class="tema-nome">Especial Dia das Mães</div>
+          <p class="tema-desc">Coleção com bolos coração, biscoitinhos decorados e presentes doces cheios de sentimento.</p>
+          <div class="tema-produtos">
+            <div class="tema-item">
+              <span>🎂</span>
+              <span>Bolo Red Velvet Coração</span>
+              <span class="item-preco">R$ 129,99</span>
+            </div>
+            <div class="tema-item">
+              <span>🍪</span>
+              <span>Kit Biscoitos com caneca</span>
+              <span class="item-preco">R$79,99</span>
+            </div>
+          </div>
+        </div>
+        <div class="tema-card fade-up" style="transition-delay:.12s" onclick="abrirWhats()">
+          <div class="tema-icon">☕</div>
+          <div class="tema-nome">Café da Tarde</div>
+          <p class="tema-desc">Para aquele momento especial com quem você ama — bolos e biscoitos que combinam com qualquer xícara.</p>
+          <div class="tema-produtos">
+            <div class="tema-item">
+              <span>🍰</span>
+              <span>Rosca Suíça Artesanal</span>
+              <span class="item-preco">R$ 79,99</span>
+            </div>
+            <div class="tema-item">
+              <span>🧁</span>
+              <span>Biscoito Amanteigado (500 g)</span>
+              <span class="item-preco">R$ 69,99</span>
+            </div>
+          </div>
+        </div>
+        <div class="tema-card fade-up" style="transition-delay:.24s" onclick="abrirWhats()">
+          <div class="tema-icon">🎪</div>
+          <div class="tema-nome">Festa Junina</div>
+          <p class="tema-desc">Em breve! Nossa coleção junina com sabores de milho, paçoca e coco. Reserve já o seu!</p>
+          <div class="tema-produtos">
+            <div class="tema-item">
+              <span>🌽</span>
+              <span>Bolo de Milho com Coco</span>
+              <span class="item-preco">Em breve</span>
+            </div>
+            <div class="tema-item">
+              <span>🥜</span>
+              <span>Biscoito de Paçoca</span>
+              <span class="item-preco">Em breve</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="depoimentos" id="depoimentos">
+    <div class="depo-header fade-up">
+      <h2 class="section-title">O que dizem por aí 💬</h2>
+      <p class="section-sub" style="margin-top:8px;">Cada cliente é especial — e cada avaliação aquece o coração da Ana.</p>
+    </div>
+    <div class="container">
+      <div class="depo-grid">
+
+        <div class="depo-card fade-up">
+          <p class="depo-texto">O bolo de chocolate com limão foi um sucesso na festa! Todo mundo perguntou onde eu comprei. Com certeza vou pedir de novo!</p>
+          <div class="depo-autor">
+            <div class="depo-avatar">👩</div>
+            <div>
+              <div class="depo-nome">Fernanda R.</div>
+              <div class="depo-estrelas">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="depo-card fade-up" style="transition-delay:.1s">
+          <p class="depo-texto">Os biscoitinhos da Ana são maravilhosos — fiz de presente pra minha mãe e ela ficou emocionada com o carinho de cada detalhe.</p>
+          <div class="depo-autor">
+            <div class="depo-avatar">🌺</div>
+            <div>
+              <div class="depo-nome">Camila S.</div>
+              <div class="depo-estrelas">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="depo-card fade-up" style="transition-delay:.2s">
+          <p class="depo-texto">Sabor caseiro de verdade, igual ao que a gente comia na casa da vovó. Encomendo toda semana e nunca decepciona!</p>
+          <div class="depo-autor">
+            <div class="depo-avatar">👨</div>
+            <div>
+              <div class="depo-nome">Roberto M.</div>
+              <div class="depo-estrelas">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="encomendas" id="encomendas">
+    <div class="container">
+      <div class="encomendas-inner fade-up">
+        <span class="badge" style="margin-bottom:18px;">📦 Faça sua encomenda</span>
+        <h2 class="section-title">Quer um doce<br>feito só pra você?</h2>
+        <div class="divider"><span>💛</span></div>
+        <p class="section-sub">
+          Encomendas com no mínimo <strong>3 dias de antecedência</strong>. Personalizamos sabor, tamanho e decoração.<br>
+          Entrega disponível ou retirada no local.
+        </p>
+        <div class="encomendas-actions">
+          <button class="btn btn-whats" onclick="abrirWhats()">
+            💬 Pedir pelo WhatsApp
+          </button>
+          <button class="btn btn-outline" onclick="abrirInstagram()">
+            📸 Ver no Instagram
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="contato">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <span class="logo-text-footer">Sabor de Amor por Ana</span>
+          <p>Tudo feito na hora, com receitas afetivas e ingredientes selecionados. Porque comida boa tem gosto de lar.</p>
+          <div class="footer-social">
+            <div class="social-btn" onclick="abrirInstagram()" title="Instagram">📸</div>
+            <div class="social-btn" onclick="abrirWhats()" title="WhatsApp">💬</div>
+            <div class="social-btn" title="Facebook">📘</div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#novidades">Novidades</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#encomendas">Encomendas</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li><span>📱 (81) 99999-0000</span></li>
+            <li><span>📍 Caruaru, PE</span></li>
+            <li><span>🕐 Seg–Sáb, 8h–18h</span></li>
+            <li><a href="#" onclick="abrirInstagram()">📸 @sabordamorporana</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sabor de Amor por Ana · Todos os direitos reservados</p>
+        <p>Feito com <span class="heart">💛</span> e muito açúcar</p>
+      </div>
+    </div>
+  </footer>
+  <div class="whats-float" onclick="abrirWhats()" title="Fale com a Ana pelo WhatsApp">💬</div>
+</body>
+</html>

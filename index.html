@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
-  <link rel="stylesheet" href="assets/imgs/">
+
 </head>
 <body>
   <header id="header">
@@ -30,7 +30,7 @@
       </ul>
 
       <div class="nav-cta">
-        <a href="#encomendas" class="btn btn-primary btn-sm" onclick="abrirWhats()">📱 Encomendar</a>
+        <button class="btn btn-primary btn-sm" onclick="abrirWhats()">📱 Encomendar</button>
       </div>
 
       <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -79,7 +79,7 @@
           <div class="hero-img-frame">
     
             <img
-              src="assets/imgs/bolo coração ninho.jpeg"
+              src="assets/imgs/bolo-coração-ninho.jpeg"
               alt="Red Velvet Jardim de Flores — Sabor de Amor por Ana"
               onerror="this.style.display='none'"
             />
@@ -132,7 +132,7 @@
         <div class="card-produto fade-up" style="transition-delay:.1s" onclick="abrirWhats()">
           <div class="card-img">
             <img
-              src="assets/imgs/biscoito amanteigado.jpeg"
+              src="assets/imgs/biscoito-amanteigado.jpeg"
               alt="Biscoito Amanteigado"
               onerror="this.style.background='#f5dfc0'"
             />
@@ -150,14 +150,10 @@
           </div>
         </div>
 
-        <!-- ── Card 3 ──────────────────────────────
-             SUBSTITUA src pela foto do produto real
-             Sugestão: bolo coração morango
-        ─────────────────────────────────────────── -->
         <div class="card-produto fade-up" style="transition-delay:.2s" onclick="abrirWhats()">
           <div class="card-img">
             <img
-              src="assets/imgs/coração de morango.jpeg"
+              src="assets/imgs/coração-de-morango.jpeg"
               alt="Bolo Coração de Morango"
               onerror="this.style.background='#f5dfc0'"
             />
@@ -373,7 +369,7 @@
             <li><span>📱 (84) 99451-0940</span></li>
             <li><span>📍 Natal, RN</span></li>
             <li><span>🕐 Seg–Sáb, 8h–18h</span></li>
-            <li><a href="#" onclick="abrirInstagram()">📸 @sabordamorporana</a></li>
+            <li><a href="#" onclick="abrirInstagram(); return false;">📸 @sabordamorporana</a></li>
           </ul>
         </div>
 

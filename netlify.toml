@@ -1,0 +1,25 @@
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+
+    # Impede que o site seja embutido em iframes (proteção contra clickjacking)
+    X-Frame-Options = "DENY"
+
+    # Impede que o navegador "adivinhe" o tipo de arquivo (proteção contra MIME sniffing)
+    X-Content-Type-Options = "nosniff"
+
+    # Controla quais informações são enviadas ao navegar para outros sites
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # Desativa recursos sensíveis do navegador que o site não usa
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+
+    # Força HTTPS por 1 ano (só ative se o HTTPS estiver funcionando 100%)
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+    # Proteção básica contra XSS em navegadores antigos
+    X-XSS-Protection = "1; mode=block"
+
+    # Permite carregar recursos apenas de fontes confiáveis
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none';"

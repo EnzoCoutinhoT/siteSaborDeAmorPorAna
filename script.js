@@ -1,4 +1,4 @@
-    function toggleMenu() {
+function toggleMenu() {
       const m = document.getElementById('mobileMenu');
       m.classList.toggle('open');
     }
@@ -22,14 +22,13 @@
 
     function abrirWhats() {
       const msg = encodeURIComponent('Olá Ana! Vi o site e gostaria de fazer uma encomenda! ');
-      
-      window.open('https://wa.me/5584994510940?text=' + msg, '_blank');
+      window.open('https://wa.me/5584994510940?text=' + msg, '_blank', 'noopener,noreferrer');
     }
 
     function abrirInstagram() {
-      window.open('https://instagram.com/sabordeamorporana', '_blank');
+      window.open('https://instagram.com/sabordeamorporana', '_blank', 'noopener,noreferrer');
     }
 
     function abrirFacebook() {
-      window.open('https://www.facebook.com/sabordeamorporana', '_blank');
+      window.open('https://www.facebook.com/sabordeamorporana', '_blank', 'noopener,noreferrer');
     }
